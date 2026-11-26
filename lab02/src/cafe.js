@@ -114,3 +114,12 @@ export function namesByCategory(menu) {
     [item.category]: [...(groups[item.category] || []), item.name],
   }), {});
 }
+
+
+
+
+export function itemsWithTag(menu, tag) {
+  return menu
+    .filter((item) => item.tags.includes(tag))
+    .map((item) => item.name);
+}
